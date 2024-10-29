@@ -99,5 +99,23 @@ router.post('/google-login', async (req, res) => {
     }
 });
 
+//route qui permet de récupérer les groupes à l'aide du token de l'utilisateur
+router.get("/groups/:token", (req, res) => {
+    const {token} = req.params;
+    User.findOne({token})
+        .then(data=>{
+            if (!data){
+                return res.json({return : false , error : "user not find with this token"})
+            }
+            res.json({return : true , groups : data.groups})
+        })
+
+})
+
+router.put("/groups/:token" , (req,res)=>{
+    const {token} = req.params;
+    const {groups} = req.body;
+    User.updateOne({token},{groups}).then(()=>res.json({return : true}))
+})
 module.exports = router;
 
