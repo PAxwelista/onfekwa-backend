@@ -64,6 +64,34 @@ router.get("/filterTypes", (req, res) => {
   });
 });
 
+//Récupère un seul partenaire avec le paramètre id
+    //(Pour afficher les détails sur la page SelectionEvent)
+router.get("/selectedPartner/:id", (req, res) => {
+    const partnerId = req.params.id;
+
+    Partner.findById(partnerId)
+    .then(dataPartner => {
+        if (dataPartner) {
+            res.json({result: true, dataPartner})
+        }
+    })
+})
+
+
+//Récupère un seul partenaire avec le paramètre id
+    //(Pour afficher les détails sur la page SelectionEvent)
+router.get("/selectedPartner/:id", (req, res) => {
+    const partnerId = req.params.id;
+
+    Partner.findById(partnerId)
+    .then(dataPartner => {
+        if (dataPartner) {
+            res.json({result: true, dataPartner})
+        }
+    })
+})
+
+
 //récupère les partenraies en fonction des différents filtres
 router.post("/randomWithFilter/:number", async (req, res) => {
   const number = req.params.number;
