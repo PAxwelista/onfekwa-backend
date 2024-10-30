@@ -12,10 +12,13 @@ const token = uid2(32);
 //hachage mdp
 const bcrypt = require('bcrypt');
 
+
+//#^[a-zA-Z0-9._-]{1,64}@([a-zA-Z0-9-]{2,252}\.[a-zA-Z.]{2,6}){5,255}$# REGEX
 //Route pour l'inscription user par le formulaire
 router.post('/signup', (req, res) => {
-	if (!checkBody(req.body, ['email', 'password'])) {
-    res.json({ result: false, error: 'Missing or empty fields' });
+	if (!checkBody(req.body, ['email', 'password', 'firstname', 'lastname'])) {
+    res.json({ result: false, error: 'Champs manquants à remplir' });
+    
     return;
   }
 
@@ -39,7 +42,7 @@ router.post('/signup', (req, res) => {
       });
     } else {
       // User already exists in database
-      res.json({ result: false, error: 'User already exists' });
+      res.json({ result: false, error: 'Cet email est déjà utilisé' });
     }
   });
 });
@@ -63,7 +66,7 @@ router.post('/google', (req, res) => {
       });
     } else {
       // User already exists in database
-      res.json({ result: false, error: 'User already exists' });
+      res.json({ result: false, error: 'Cet email est déjà utilisé' });
     }
   });
 });
@@ -71,7 +74,7 @@ router.post('/google', (req, res) => {
 // Route POST pour la connexion user via l'email
 router.post('/signin', (req, res) => {
   if (!checkBody(req.body, ['email', 'password'])) {
-    res.json({ result: false, error: 'Missing or empty fields' });
+    res.json({ result: false, error: 'Champs manquants à remplir' });
     return;
   }
 
@@ -80,7 +83,7 @@ router.post('/signin', (req, res) => {
       console.log(data.token)
       res.json({ result: true, token: data.token });
     } else {
-      res.json({ result: false, error: 'User not found' });
+      res.json({ result: false, error: 'Aucun utilisateur trouvé' });
     }
   });
 });
