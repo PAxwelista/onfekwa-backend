@@ -1,41 +1,116 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
-const Partner = require("../models/partners")
+const Partner = require("../models/partners");
+
+const valDay = {
+  1: "monday",
+  2: "tuesday",
+  3: "wednesday",
+  4: "thursday",
+  5: "friday",
+  6: "saturday",
+  0: "sunday",
+};
+
+function getHoursWithMin(date) {
+  return date.getHours() + date.getMinutes() / 60;
+}
+
+function distanceWord(latA, latB, lonA, lonB) {
+  var R = 6371;
+  var dLat = deg2rad(latB - latA);
+  var dLon = deg2rad(lonB - lonA);
+  var a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(deg2rad(latA)) *
+      Math.cos(deg2rad(latB)) *
+      Math.sin(dLon / 2) *
+      Math.sin(dLon / 2);
+  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  var d = R * c;
+  return d.toFixed(2);
+}
+
+function deg2rad(deg) {
+  return deg * (Math.PI / 180);
+}
 
 // Récupère tous les partenaires
-router.get("/" , (req,res)=>{
-    Partner.find().then(data=>{
-        res.json({result : true , partners : data})
-    })
-    
-})
+router.get("/", (req, res) => {
+  Partner.find().then((data) => {
+    res.json({ result: true, partners: data });
+  });
+});
 
-// Récupère les partenaires filté par type d'evenement 
-    //(utile pour filter dans tous les evenements)
-router.get("/filter/:filterType" , (req, res) => {
-    const filterType = req.params.filterType;
+// Récupère les partenaires filté par type d'evenement
+//(utile pour filter dans tous les evenements)
+router.get("/filter/:filterType", (req, res) => {
+  const filterType = req.params.filterType;
 
-    Partner.find({filterTypes: filterType})
-    .then(data => {
-        res.json({ result: true, partners: data})
-    });
+  Partner.find({ filterTypes: filterType }).then((data) => {
+    res.json({ result: true, partners: data });
+  });
 });
 
 //Récupère tous les filterType de tous les partenaires
-    //(En supprimant les doublons)
+//(En supprimant les doublons)
 router.get("/filterTypes", (req, res) => {
+  Partner.find({}, "filterTypes").then((data) => {
+    const allFilterTypes = data.flatMap((partner) => partner.filterTypes);
+    const finalFilterTypes = [...new Set(allFilterTypes)];
 
-    Partner.find({}, "filterTypes")
-    .then(data => {
-        console.log("data", data)
-
-        const allFilterTypes = data.flatMap(partner => partner.filterTypes);
-        const finalFilterTypes = [...new Set(allFilterTypes)];
-
-        res.json({result: true, filterTypes: finalFilterTypes});
-    });
+    res.json({ result: true, filterTypes: finalFilterTypes });
+  });
 });
 
+//récupère les partenraies en fonction des différents filtres
+router.post("/randomWithFilter/:number", async (req, res) => {
+  const number = req.params.number;
+  const { budget, eventType, when, where, distance } = req.body;
+  if (budget && eventType && when && where && distance) {
+    //pour le budget
+    const tabBudget = budget.split("-");
+    const budgetMin = Number(tabBudget[0]);
+    const budgetMax = Number(tabBudget[1]);
+
+    const data = await Partner.find({
+      filterTypes: eventType,
+      $and: [
+        { averagePrice: { $gte: budgetMin } },
+        { averagePrice: { $lte: budgetMax } },
+      ],
+    });
+
+    whenDate = new Date(when);
+    whenHours = getHoursWithMin(whenDate);
+
+    const dataFilter = data.filter((partner) =>
+      partner.openingInfos[valDay[whenDate.getDay()]].some((openHours) => {
+        const openFormatHours = getHoursWithMin(openHours.openTime);
+        const closeFormatHours = getHoursWithMin(openHours.closingTime);
+        return (
+          (openFormatHours < closeFormatHours
+            ? openFormatHours < whenHours && closeFormatHours > whenHours
+            : openFormatHours < whenHours || closeFormatHours > whenHours) &&
+          distanceWord(
+            partner.adress.coordinate.lat,
+            where.latitude,
+            partner.adress.coordinate.long,
+            where.longitude
+          ) < distance
+        );
+      })
+    );
+
+    const randomDataFilter = dataFilter
+      .sort(() => Math.random() - 0.5)
+      .slice(dataFilter.length - number);
+
+    res.json({ result: true, data: randomDataFilter });
+  } else {
+    res.json({ result: false, error: "les filtres ne sont pas complets" });
+  }
+});
 
 module.exports = router;
