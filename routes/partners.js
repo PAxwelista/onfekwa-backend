@@ -37,5 +37,19 @@ router.get("/filterTypes", (req, res) => {
     });
 });
 
+//Récupère un seul partenaire avec le paramètre id
+    //(Pour afficher les détails sur la page SelectionEvent)
+router.get("/selectedPartner/:id", (req, res) => {
+    const partnerId = req.params.id;
+
+    Partner.findById(partnerId)
+    .then(dataPartner => {
+        if (dataPartner) {
+            res.json({result: true, dataPartner})
+        }
+    })
+})
+
+
 
 module.exports = router;
