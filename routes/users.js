@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
+const User = require('../models/users');
 
 require('../models/connection');
-const User = require('../models/users');
 const { checkBody } = require('../modules/checkBody');
 
 //token
