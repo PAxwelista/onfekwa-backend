@@ -1,0 +1,3042 @@
+[
+  {
+    "name": "Partenaire 1",
+    "category": "Café",
+    "description": "Un espace parfait pour les amoureux de la culture.",
+    "averagePrice": 54,
+    "averageNote": 1.7,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/735869/pexels-photo-735869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact1@partner.com",
+      "phoneNumber": "123-456-7890"
+    },
+    "adress": {
+      "adress": "10 Rue de l'Exemple",
+      "zipCode": 75000,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.862657507029034,
+        "long": 2.3561955616102828
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Fun",
+      "Rencontre"
+    ]
+  },
+  {
+    "name": "Partenaire 2",
+    "category": "Plage",
+    "description": "Un lieu chaleureux avec des options pour se divertir.",
+    "averagePrice": 8,
+    "averageNote": 3.5,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact2@partner.com",
+      "phoneNumber": "123-456-7891"
+    },
+    "adress": {
+      "adress": "11 Rue de l'Exemple",
+      "zipCode": 75001,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.86201561972909,
+        "long": 2.360840338727266
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Romantique",
+      "Romantique"
+    ]
+  },
+  {
+    "name": "Partenaire 3",
+    "category": "Théâtre",
+    "description": "Un lieu chaleureux avec des options pour se divertir.",
+    "averagePrice": 10,
+    "averageNote": 3.1,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact3@partner.com",
+      "phoneNumber": "123-456-7892"
+    },
+    "adress": {
+      "adress": "12 Rue de l'Exemple",
+      "zipCode": 75002,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.86175394470186,
+        "long": 2.3532130830486317
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Fun",
+      "Chill"
+    ]
+  },
+  {
+    "name": "Partenaire 4",
+    "category": "Cinéma",
+    "description": "Un lieu chaleureux avec des options pour se divertir.",
+    "averagePrice": 46,
+    "averageNote": 0.7,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact4@partner.com",
+      "phoneNumber": "123-456-7893"
+    },
+    "adress": {
+      "adress": "13 Rue de l'Exemple",
+      "zipCode": 75003,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.859616438692456,
+        "long": 2.3605468864623744
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Romantique",
+      "Chill"
+    ]
+  },
+  {
+    "name": "Partenaire 5",
+    "category": "Théâtre",
+    "description": "Endroit animé pour des sorties entre amis.",
+    "averagePrice": 31,
+    "averageNote": 4.2,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/1307698/pexels-photo-1307698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact5@partner.com",
+      "phoneNumber": "123-456-7894"
+    },
+    "adress": {
+      "adress": "14 Rue de l'Exemple",
+      "zipCode": 75004,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.859468796836886,
+        "long": 2.3558612948719047
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Rencontre",
+      "Chill"
+    ]
+  },
+  {
+    "name": "Partenaire 6",
+    "category": "Restaurant",
+    "description": "Un espace parfait pour les amoureux de la culture.",
+    "averagePrice": 37,
+    "averageNote": 2.6,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact6@partner.com",
+      "phoneNumber": "123-456-7895"
+    },
+    "adress": {
+      "adress": "15 Rue de l'Exemple",
+      "zipCode": 75005,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.85672804979096,
+        "long": 2.3557980608061935
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Fun",
+      "Rencontre"
+    ]
+  },
+  {
+    "name": "Partenaire 7",
+    "category": "Plage",
+    "description": "Endroit animé pour des sorties entre amis.",
+    "averagePrice": 53,
+    "averageNote": 4.5,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/1307698/pexels-photo-1307698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact7@partner.com",
+      "phoneNumber": "123-456-7896"
+    },
+    "adress": {
+      "adress": "16 Rue de l'Exemple",
+      "zipCode": 75006,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.86208817974593,
+        "long": 2.35309176794259
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Fun",
+      "Fun"
+    ]
+  },
+  {
+    "name": "Partenaire 8",
+    "category": "Plage",
+    "description": "Un lieu chaleureux avec des options pour se divertir.",
+    "averagePrice": 9,
+    "averageNote": 1.2,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact8@partner.com",
+      "phoneNumber": "123-456-7897"
+    },
+    "adress": {
+      "adress": "17 Rue de l'Exemple",
+      "zipCode": 75007,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.85806798992293,
+        "long": 2.3537151335700544
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Chill",
+      "Rencontre"
+    ]
+  },
+  {
+    "name": "Partenaire 9",
+    "category": "Cinéma",
+    "description": "Lieu accueillant avec ambiance relaxante.",
+    "averagePrice": 30,
+    "averageNote": 0.5,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact9@partner.com",
+      "phoneNumber": "123-456-7898"
+    },
+    "adress": {
+      "adress": "18 Rue de l'Exemple",
+      "zipCode": 75008,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.865620698919024,
+        "long": 2.3617327465045093
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Romantique",
+      "Rencontre"
+    ]
+  },
+  {
+    "name": "Partenaire 10",
+    "category": "Cinéma",
+    "description": "Endroit animé pour des sorties entre amis.",
+    "averagePrice": 11,
+    "averageNote": 2.1,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/1307698/pexels-photo-1307698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact10@partner.com",
+      "phoneNumber": "123-456-7899"
+    },
+    "adress": {
+      "adress": "19 Rue de l'Exemple",
+      "zipCode": 75009,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.85686895744405,
+        "long": 2.3539572040683474
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Fun",
+      "Romantique"
+    ]
+  },
+  {
+    "name": "Partenaire 11",
+    "category": "Salle de sport",
+    "description": "Un lieu chaleureux avec des options pour se divertir.",
+    "averagePrice": 12,
+    "averageNote": 1.9,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact11@partner.com",
+      "phoneNumber": "123-456-78910"
+    },
+    "adress": {
+      "adress": "20 Rue de l'Exemple",
+      "zipCode": 75010,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.864699849200036,
+        "long": 2.3589503681235158
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Chill",
+      "Chill"
+    ]
+  },
+  {
+    "name": "Partenaire 12",
+    "category": "Salle de sport",
+    "description": "Un espace parfait pour les amoureux de la culture.",
+    "averagePrice": 8,
+    "averageNote": 0,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/735869/pexels-photo-735869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact12@partner.com",
+      "phoneNumber": "123-456-78911"
+    },
+    "adress": {
+      "adress": "21 Rue de l'Exemple",
+      "zipCode": 75011,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.866159122360706,
+        "long": 2.357256831273879
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Romantique",
+      "Romantique"
+    ]
+  },
+  {
+    "name": "Partenaire 13",
+    "category": "Parc",
+    "description": "Endroit animé pour des sorties entre amis.",
+    "averagePrice": 39,
+    "averageNote": 1.8,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/735869/pexels-photo-735869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact13@partner.com",
+      "phoneNumber": "123-456-78912"
+    },
+    "adress": {
+      "adress": "22 Rue de l'Exemple",
+      "zipCode": 75012,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.865639731377776,
+        "long": 2.3533655378811047
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Rencontre",
+      "Rencontre"
+    ]
+  },
+  {
+    "name": "Partenaire 14",
+    "category": "Musée",
+    "description": "Un lieu chaleureux avec des options pour se divertir.",
+    "averagePrice": 40,
+    "averageNote": 3.7,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact14@partner.com",
+      "phoneNumber": "123-456-78913"
+    },
+    "adress": {
+      "adress": "23 Rue de l'Exemple",
+      "zipCode": 75013,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.86566962321256,
+        "long": 2.3591441037498058
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Fun",
+      "Romantique"
+    ]
+  },
+  {
+    "name": "Partenaire 15",
+    "category": "Musée",
+    "description": "Endroit animé pour des sorties entre amis.",
+    "averagePrice": 53,
+    "averageNote": 2.5,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/735869/pexels-photo-735869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact15@partner.com",
+      "phoneNumber": "123-456-78914"
+    },
+    "adress": {
+      "adress": "24 Rue de l'Exemple",
+      "zipCode": 75014,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.864980614834934,
+        "long": 2.3537131450852287
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Romantique",
+      "Chill"
+    ]
+  },
+  {
+    "name": "Partenaire 16",
+    "category": "Salle de sport",
+    "description": "Un espace parfait pour les amoureux de la culture.",
+    "averagePrice": 27,
+    "averageNote": 1.5,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/744780/pexels-photo-744780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact16@partner.com",
+      "phoneNumber": "123-456-78915"
+    },
+    "adress": {
+      "adress": "25 Rue de l'Exemple",
+      "zipCode": 75015,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.86602566334223,
+        "long": 2.3595534686002764
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Romantique",
+      "Rencontre"
+    ]
+  },
+  {
+    "name": "Partenaire 17",
+    "category": "Musée",
+    "description": "Lieu accueillant avec ambiance relaxante.",
+    "averagePrice": 15,
+    "averageNote": 2.1,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact17@partner.com",
+      "phoneNumber": "123-456-78916"
+    },
+    "adress": {
+      "adress": "26 Rue de l'Exemple",
+      "zipCode": 75016,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.858383017413026,
+        "long": 2.3617703386601843
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Rencontre",
+      "Romantique"
+    ]
+  },
+  {
+    "name": "Partenaire 18",
+    "category": "Musée",
+    "description": "Lieu accueillant avec ambiance relaxante.",
+    "averagePrice": 44,
+    "averageNote": 1.6,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/735869/pexels-photo-735869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact18@partner.com",
+      "phoneNumber": "123-456-78917"
+    },
+    "adress": {
+      "adress": "27 Rue de l'Exemple",
+      "zipCode": 75017,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.860610334947054,
+        "long": 2.3619457021409422
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Fun",
+      "Chill"
+    ]
+  },
+  {
+    "name": "Partenaire 19",
+    "category": "Cinéma",
+    "description": "Lieu accueillant avec ambiance relaxante.",
+    "averagePrice": 54,
+    "averageNote": 4.6,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/761854/pexels-photo-761854.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact19@partner.com",
+      "phoneNumber": "123-456-78918"
+    },
+    "adress": {
+      "adress": "28 Rue de l'Exemple",
+      "zipCode": 75018,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.86550996043416,
+        "long": 2.3558549177615236
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Romantique",
+      "Romantique"
+    ]
+  },
+  {
+    "name": "Partenaire 20",
+    "category": "Café",
+    "description": "Lieu accueillant avec ambiance relaxante.",
+    "averagePrice": 46,
+    "averageNote": 2.6,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact20@partner.com",
+      "phoneNumber": "123-456-78919"
+    },
+    "adress": {
+      "adress": "29 Rue de l'Exemple",
+      "zipCode": 75019,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.856830228743945,
+        "long": 2.3592992743219234
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Rencontre",
+      "Romantique"
+    ]
+  },
+  {
+    "name": "Partenaire 21",
+    "category": "Restaurant",
+    "description": "Endroit animé pour des sorties entre amis.",
+    "averagePrice": 25,
+    "averageNote": 1.8,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/1058277/pexels-photo-1058277.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact21@partner.com",
+      "phoneNumber": "123-456-78920"
+    },
+    "adress": {
+      "adress": "30 Rue de l'Exemple",
+      "zipCode": 75000,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.85873019655141,
+        "long": 2.3581419961479133
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Chill",
+      "Rencontre"
+    ]
+  },
+  {
+    "name": "Partenaire 22",
+    "category": "Parc",
+    "description": "Lieu accueillant avec ambiance relaxante.",
+    "averagePrice": 44,
+    "averageNote": 3.1,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/761854/pexels-photo-761854.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact22@partner.com",
+      "phoneNumber": "123-456-78921"
+    },
+    "adress": {
+      "adress": "31 Rue de l'Exemple",
+      "zipCode": 75001,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.86264984233864,
+        "long": 2.359673094123779
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Fun",
+      "Chill"
+    ]
+  },
+  {
+    "name": "Partenaire 23",
+    "category": "Musée",
+    "description": "Un lieu chaleureux avec des options pour se divertir.",
+    "averagePrice": 19,
+    "averageNote": 1.4,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/1307698/pexels-photo-1307698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact23@partner.com",
+      "phoneNumber": "123-456-78922"
+    },
+    "adress": {
+      "adress": "32 Rue de l'Exemple",
+      "zipCode": 75002,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.85993571757497,
+        "long": 2.358384810670128
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Romantique",
+      "Rencontre"
+    ]
+  },
+  {
+    "name": "Partenaire 24",
+    "category": "Parc",
+    "description": "Endroit animé pour des sorties entre amis.",
+    "averagePrice": 13,
+    "averageNote": 3.4,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact24@partner.com",
+      "phoneNumber": "123-456-78923"
+    },
+    "adress": {
+      "adress": "33 Rue de l'Exemple",
+      "zipCode": 75003,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.85895228148966,
+        "long": 2.3543291042881136
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Romantique",
+      "Romantique"
+    ]
+  },
+  {
+    "name": "Partenaire 25",
+    "category": "Cinéma",
+    "description": "Un lieu chaleureux avec des options pour se divertir.",
+    "averagePrice": 42,
+    "averageNote": 1.2,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact25@partner.com",
+      "phoneNumber": "123-456-78924"
+    },
+    "adress": {
+      "adress": "34 Rue de l'Exemple",
+      "zipCode": 75004,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.86541488881394,
+        "long": 2.353485932888431
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Chill",
+      "Rencontre"
+    ]
+  },
+  {
+    "name": "Partenaire 26",
+    "category": "Parc",
+    "description": "Endroit animé pour des sorties entre amis.",
+    "averagePrice": 45,
+    "averageNote": 1.5,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/735869/pexels-photo-735869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact26@partner.com",
+      "phoneNumber": "123-456-78925"
+    },
+    "adress": {
+      "adress": "35 Rue de l'Exemple",
+      "zipCode": 75005,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.86051150925904,
+        "long": 2.3571418830675466
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Chill",
+      "Romantique"
+    ]
+  },
+  {
+    "name": "Partenaire 27",
+    "category": "Restaurant",
+    "description": "Endroit animé pour des sorties entre amis.",
+    "averagePrice": 28,
+    "averageNote": 3.6,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/1307698/pexels-photo-1307698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact27@partner.com",
+      "phoneNumber": "123-456-78926"
+    },
+    "adress": {
+      "adress": "36 Rue de l'Exemple",
+      "zipCode": 75006,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.85695947335414,
+        "long": 2.3576879762393395
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Chill",
+      "Romantique"
+    ]
+  },
+  {
+    "name": "Partenaire 28",
+    "category": "Salle de sport",
+    "description": "Un espace parfait pour les amoureux de la culture.",
+    "averagePrice": 36,
+    "averageNote": 3.6,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/1307698/pexels-photo-1307698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact28@partner.com",
+      "phoneNumber": "123-456-78927"
+    },
+    "adress": {
+      "adress": "37 Rue de l'Exemple",
+      "zipCode": 75007,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.857763752126786,
+        "long": 2.3523883479671595
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Rencontre",
+      "Fun"
+    ]
+  },
+  {
+    "name": "Partenaire 29",
+    "category": "Salle de sport",
+    "description": "Un lieu chaleureux avec des options pour se divertir.",
+    "averagePrice": 35,
+    "averageNote": 3.4,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/1058277/pexels-photo-1058277.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact29@partner.com",
+      "phoneNumber": "123-456-78928"
+    },
+    "adress": {
+      "adress": "38 Rue de l'Exemple",
+      "zipCode": 75008,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.85661609528873,
+        "long": 2.354029772256155
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Romantique",
+      "Chill"
+    ]
+  },
+  {
+    "name": "Partenaire 30",
+    "category": "Cinéma",
+    "description": "Un espace parfait pour les amoureux de la culture.",
+    "averagePrice": 19,
+    "averageNote": 3.8,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/744780/pexels-photo-744780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact30@partner.com",
+      "phoneNumber": "123-456-78929"
+    },
+    "adress": {
+      "adress": "39 Rue de l'Exemple",
+      "zipCode": 75009,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.85805161174639,
+        "long": 2.3573917594117626
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Rencontre",
+      "Fun"
+    ]
+  },
+  {
+    "name": "Partenaire 31",
+    "category": "Restaurant",
+    "description": "Un espace parfait pour les amoureux de la culture.",
+    "averagePrice": 36,
+    "averageNote": 1.1,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/1058277/pexels-photo-1058277.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact31@partner.com",
+      "phoneNumber": "123-456-78930"
+    },
+    "adress": {
+      "adress": "40 Rue de l'Exemple",
+      "zipCode": 75010,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.864341429739085,
+        "long": 2.356472167262768
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Romantique",
+      "Rencontre"
+    ]
+  },
+  {
+    "name": "Partenaire 32",
+    "category": "Plage",
+    "description": "Un lieu chaleureux avec des options pour se divertir.",
+    "averagePrice": 53,
+    "averageNote": 1.9,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact32@partner.com",
+      "phoneNumber": "123-456-78931"
+    },
+    "adress": {
+      "adress": "41 Rue de l'Exemple",
+      "zipCode": 75011,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.85892282532086,
+        "long": 2.353541672422252
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Chill",
+      "Chill"
+    ]
+  },
+  {
+    "name": "Partenaire 33",
+    "category": "Musée",
+    "description": "Un lieu chaleureux avec des options pour se divertir.",
+    "averagePrice": 23,
+    "averageNote": 1.7,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/1058277/pexels-photo-1058277.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact33@partner.com",
+      "phoneNumber": "123-456-78932"
+    },
+    "adress": {
+      "adress": "42 Rue de l'Exemple",
+      "zipCode": 75012,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.86313682816649,
+        "long": 2.3616897035330418
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Fun",
+      "Romantique"
+    ]
+  },
+  {
+    "name": "Partenaire 34",
+    "category": "Musée",
+    "description": "Lieu accueillant avec ambiance relaxante.",
+    "averagePrice": 28,
+    "averageNote": 2.4,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/735869/pexels-photo-735869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact34@partner.com",
+      "phoneNumber": "123-456-78933"
+    },
+    "adress": {
+      "adress": "43 Rue de l'Exemple",
+      "zipCode": 75013,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.85995073930168,
+        "long": 2.361710009697375
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Fun",
+      "Fun"
+    ]
+  },
+  {
+    "name": "Partenaire 35",
+    "category": "Restaurant",
+    "description": "Un lieu chaleureux avec des options pour se divertir.",
+    "averagePrice": 19,
+    "averageNote": 3.4,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/735869/pexels-photo-735869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact35@partner.com",
+      "phoneNumber": "123-456-78934"
+    },
+    "adress": {
+      "adress": "44 Rue de l'Exemple",
+      "zipCode": 75014,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.86639116872475,
+        "long": 2.3532330248845335
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Romantique",
+      "Rencontre"
+    ]
+  },
+  {
+    "name": "Partenaire 36",
+    "category": "Plage",
+    "description": "Lieu accueillant avec ambiance relaxante.",
+    "averagePrice": 12,
+    "averageNote": 0.3,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/744780/pexels-photo-744780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact36@partner.com",
+      "phoneNumber": "123-456-78935"
+    },
+    "adress": {
+      "adress": "45 Rue de l'Exemple",
+      "zipCode": 75015,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.865402918392434,
+        "long": 2.3604235335829213
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Fun",
+      "Fun"
+    ]
+  },
+  {
+    "name": "Partenaire 37",
+    "category": "Café",
+    "description": "Endroit animé pour des sorties entre amis.",
+    "averagePrice": 32,
+    "averageNote": 4.2,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/1058277/pexels-photo-1058277.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact37@partner.com",
+      "phoneNumber": "123-456-78936"
+    },
+    "adress": {
+      "adress": "46 Rue de l'Exemple",
+      "zipCode": 75016,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.864714769002575,
+        "long": 2.357179256022512
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T10:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T15:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Romantique",
+      "Romantique"
+    ]
+  },
+  {
+    "name": "Partenaire 38",
+    "category": "Musée",
+    "description": "Un espace parfait pour les amoureux de la culture.",
+    "averagePrice": 28,
+    "averageNote": 4,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/1307698/pexels-photo-1307698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact38@partner.com",
+      "phoneNumber": "123-456-78937"
+    },
+    "adress": {
+      "adress": "47 Rue de l'Exemple",
+      "zipCode": 75017,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.85709876385589,
+        "long": 2.3593609318664077
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T11:00:00Z",
+          "closingTime": "2023-01-01T15:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Rencontre",
+      "Fun"
+    ]
+  },
+  {
+    "name": "Partenaire 39",
+    "category": "Café",
+    "description": "Endroit animé pour des sorties entre amis.",
+    "averagePrice": 9,
+    "averageNote": 5,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact39@partner.com",
+      "phoneNumber": "123-456-78938"
+    },
+    "adress": {
+      "adress": "48 Rue de l'Exemple",
+      "zipCode": 75018,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.863271875064974,
+        "long": 2.3526418903620603
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T16:00:00Z",
+          "closingTime": "2023-01-01T14:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Romantique",
+      "Chill"
+    ]
+  },
+  {
+    "name": "Partenaire 40",
+    "category": "Salle de sport",
+    "description": "Endroit animé pour des sorties entre amis.",
+    "averagePrice": 32,
+    "averageNote": 3.8,
+    "urlsPhotos": [
+      "https://images.pexels.com/photos/761854/pexels-photo-761854.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "infosAdds": [
+      "Wi-Fi gratuit",
+      "Parking gratuit",
+      "Accessibilité PMR"
+    ],
+    "contact": {
+      "email": "contact40@partner.com",
+      "phoneNumber": "123-456-78939"
+    },
+    "adress": {
+      "adress": "49 Rue de l'Exemple",
+      "zipCode": 75019,
+      "city": "Paris",
+      "coordinate": {
+        "lat": 48.865197682229116,
+        "long": 2.361202077217319
+      }
+    },
+    "openingInfos": {
+      "monday": [
+        {
+          "openTime": "2023-01-01T12:00:00Z",
+          "closingTime": "2023-01-01T11:00:00Z"
+        }
+      ],
+      "tuesday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T09:00:00Z"
+        }
+      ],
+      "wednesday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "thursday": [
+        {
+          "openTime": "2023-01-01T14:00:00Z",
+          "closingTime": "2023-01-01T12:00:00Z"
+        }
+      ],
+      "friday": [
+        {
+          "openTime": "2023-01-01T10:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "saturday": [
+        {
+          "openTime": "2023-01-01T13:00:00Z",
+          "closingTime": "2023-01-01T13:00:00Z"
+        }
+      ],
+      "sunday": [
+        {
+          "openTime": "2023-01-01T09:00:00Z",
+          "closingTime": "2023-01-01T16:00:00Z"
+        }
+      ]
+    },
+    "filterTypes": [
+      "Chill",
+      "Chill"
+    ]
+  }
+]
