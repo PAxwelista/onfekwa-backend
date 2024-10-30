@@ -12,21 +12,48 @@ const token = uid2(32);
 //hachage mdp
 const bcrypt = require('bcrypt');
 
-
+//Route pour l'inscription user par le formulaire
 router.post('/signup', (req, res) => {
-	if (!checkBody(req.body, ['username', 'password'])) {
+	if (!checkBody(req.body, ['email', 'password'])) {
     res.json({ result: false, error: 'Missing or empty fields' });
     return;
   }
 
   // Check if the user has not already been registered
-  User.findOne({ username: req.body.username }).then(data => {
+  User.findOne({ email: req.body.email }).then(data => {
     const hash = bcrypt.hashSync(req.body.password, 10);
 
     if (data === null) {
       const newUser = new User({
-        username: req.body.username,
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+        email: req.body.email,
         password: hash,
+        groups: ['En couple', 'Avec les collègues', 'Avec les amis', 'En famille'],
+        token,
+      });
+
+      newUser.save().then(() => {
+        res.json({ result: true, token });
+        console.log(token)
+      });
+    } else {
+      // User already exists in database
+      res.json({ result: false, error: 'User already exists' });
+    }
+  });
+});
+//Route POST pour l'inscription user via google
+router.post('/google', (req, res) => {
+  // Check if the user has not already been registered
+  User.findOne({ email: req.body.username }).then(data => {
+    const hash = bcrypt.hashSync(req.body.password, 10);
+
+    if (data === null) {
+      const newUser = new User({
+        firstname: req.body.fisrtname,
+        lastname: req.body.lastname,
+        groups: ['En couple', 'Avec les collègues', 'Avec les amis', 'En famille'],
         token,
       });
 
@@ -41,34 +68,25 @@ router.post('/signup', (req, res) => {
   });
 });
 
-// Route POST pour la connexion
-router.post('/signin', async (req, res) => {
-    const { email, password } = req.body; 
+// Route POST pour la connexion user via l'email
+router.post('/signin', (req, res) => {
+  if (!checkBody(req.body, ['email', 'password'])) {
+    res.json({ result: false, error: 'Missing or empty fields' });
+    return;
+  }
 
-    // Vérifie que l'email et le mot de passe sont fournis
-    if (!email || !password) return res.json({ message: 'Email et mot de passe requis.' });
-    try {
-        // Recherche de l'utilisateur dans la base de données avec l'email et le mot de passe
-        const user = await user.findOne({ email, password }); 
-        // Utilise la fonction `findOne` de Mongoose pour chercher un utilisateur avec cet email et ce mot de passe
-
-        if (user) { // Si un utilisateur correspondant est trouvé
-            // Génère un token JWT pour l'utilisateur
-            const token = jwt.sign({ userId: user._id }, 'votre_secret', { expiresIn: '1h' });
-            // `jwt.sign` crée un token avec l'ID de l'utilisateur ; 'votre_secret' est la clé secrète
-            
-
-            return res.json({ message: 'Connexion réussie', token }); 
-        }
-        
-        res.json({ message: 'Identifiants incorrects.' }); // Si aucun utilisateur n'est trouvé, renvoie un message d'erreur
-    } catch (error) {
-        res.json({ message: 'Erreur interne' }); // En cas d'erreur, renvoie un message d'erreur générique
+  User.findOne({ email: req.body.email}).then(data => {
+    if (data && bcrypt.compareSync(req.body.password, data.password)) {
+      console.log(data.token)
+      res.json({ result: true, token: data.token });
+    } else {
+      res.json({ result: false, error: 'User not found' });
     }
+  });
 });
 
 // Route pour la connexion avec Google
-router.post('/google-login', async (req, res) => {
+router.post('/google', async (req, res) => {
     const { idToken } = req.body; // Le token reçu du client
 
     try {
