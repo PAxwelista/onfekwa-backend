@@ -12,8 +12,6 @@ const token = uid2(32);
 //hachage mdp
 const bcrypt = require('bcrypt');
 
-
-//#^[a-zA-Z0-9._-]{1,64}@([a-zA-Z0-9-]{2,252}\.[a-zA-Z.]{2,6}){5,255}$# REGEX
 //Route pour l'inscription user par le formulaire
 router.post('/signup', (req, res) => {
 	if (!checkBody(req.body, ['email', 'password', 'firstname', 'lastname'])) {
@@ -25,7 +23,10 @@ router.post('/signup', (req, res) => {
   // Check if the user has not already been registered
   User.findOne({ email: req.body.email }).then(data => {
     const hash = bcrypt.hashSync(req.body.password, 10);
-
+    const patternEmail = /^[a-zA-Z0-9._%+-]{1,64}@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!patternEmail.test(req.body.email)){
+      return res.json({ result: false, error: "Le format de l'email n'est pas valide" })
+    }
     if (data === null) {
       const newUser = new User({
         firstname: req.body.firstname,
@@ -37,7 +38,7 @@ router.post('/signup', (req, res) => {
       });
 
       newUser.save().then(() => {
-        res.json({ result: true, token });
+        res.json({ result: true, firstname: req.body.firstname, token, email: req.body.email });
         console.log(token)
       });
     } else {
@@ -61,7 +62,7 @@ router.post('/google', (req, res) => {
       });
 
       newUser.save().then(() => {
-        res.json({ result: true, token });
+        res.json({ result: true, firstname: data.firstname, token });
         console.log(token)
       });
     } else {
@@ -81,7 +82,7 @@ router.post('/signin', (req, res) => {
   User.findOne({ email: req.body.email}).then(data => {
     if (data && bcrypt.compareSync(req.body.password, data.password)) {
       console.log(data.token)
-      res.json({ result: true, token: data.token });
+      res.json({ result: true, firstname: data.firstname, token: data.token, email: data.email });
     } else {
       res.json({ result: false, error: 'Aucun utilisateur trouvé' });
     }
@@ -137,6 +138,22 @@ router.put("/groups/:token" , (req,res)=>{
     const {token} = req.params;
     const {groups} = req.body;
     User.updateOne({token},{groups}).then(()=>res.json({return : true}))
+})
+
+//route qui permet de supprimer un utilisateur via son email
+router.delete('/', (req,res) => {
+  
+  User.deleteOne({email: req.body.email})
+  .then(data =>{
+    console.log(data)
+      if(data.deletedCount > 0){
+          res.json({result: true})
+      } else {
+          res.json({result: false, error: 'No user found'})
+      }
+  }
+     
+  )
 })
 module.exports = router;
 
