@@ -65,32 +65,28 @@ router.get("/filterTypes", (req, res) => {
 });
 
 //Récupère un seul partenaire avec le paramètre id
-    //(Pour afficher les détails sur la page SelectionEvent)
+//(Pour afficher les détails sur la page SelectionEvent)
 router.get("/selectedPartner/:id", (req, res) => {
-    const partnerId = req.params.id;
+  const partnerId = req.params.id;
 
-    Partner.findById(partnerId)
-    .then(dataPartner => {
-        if (dataPartner) {
-            res.json({result: true, dataPartner})
-        }
-    })
-})
-
+  Partner.findById(partnerId).then((dataPartner) => {
+    if (dataPartner) {
+      res.json({ result: true, dataPartner });
+    }
+  });
+});
 
 //Récupère un seul partenaire avec le paramètre id
-    //(Pour afficher les détails sur la page SelectionEvent)
+//(Pour afficher les détails sur la page SelectionEvent)
 router.get("/selectedPartner/:id", (req, res) => {
-    const partnerId = req.params.id;
+  const partnerId = req.params.id;
 
-    Partner.findById(partnerId)
-    .then(dataPartner => {
-        if (dataPartner) {
-            res.json({result: true, dataPartner})
-        }
-    })
-})
-
+  Partner.findById(partnerId).then((dataPartner) => {
+    if (dataPartner) {
+      res.json({ result: true, dataPartner });
+    }
+  });
+});
 
 //récupère les partenraies en fonction des différents filtres
 router.post("/randomWithFilter/:number", async (req, res) => {
@@ -110,32 +106,74 @@ router.post("/randomWithFilter/:number", async (req, res) => {
       ],
     });
 
+    //Si la data est vide à cet endroit c'est qu'il n'y a aucun partenaire pour lui
+    //avec le type ou le budget donnée
+    if (!data.length) {
+      res.json({
+        result: true,
+        empty: true,
+        why: "Aucun partenaire avec ce budget",
+      });
+      return;
+    }
+
     whenDate = new Date(when);
     whenHours = getHoursWithMin(whenDate);
 
-    const dataFilter = data.filter((partner) =>
-      partner.openingInfos[valDay[whenDate.getDay()]].some((openHours) => {
-        const openFormatHours = getHoursWithMin(openHours.openTime);
-        const closeFormatHours = getHoursWithMin(openHours.closingTime);
-        return (
-          (openFormatHours < closeFormatHours
+    const dataFilterHours = data.filter(
+      (partner) =>
+        partner.openingInfos[valDay[whenDate.getDay()]].some((openHours) => {
+          const openFormatHours = getHoursWithMin(openHours.openTime);
+          const closeFormatHours = getHoursWithMin(openHours.closingTime);
+          return openFormatHours < closeFormatHours
             ? openFormatHours < whenHours && closeFormatHours > whenHours
-            : openFormatHours < whenHours || closeFormatHours > whenHours) &&
-          distanceWord(
-            partner.adress.coordinate.lat,
-            where.latitude,
-            partner.adress.coordinate.long,
-            where.longitude
-          ) < distance
-        );
-      })
+            : openFormatHours < whenHours || closeFormatHours > whenHours;
+        }) &&
+        distanceWord(
+          partner.adress.coordinate.lat,
+          where.latitude,
+          partner.adress.coordinate.long,
+          where.longitude
+        ) < distance
     );
 
-    const randomDataFilter = dataFilter
-      .sort(() => Math.random() - 0.5)
-      .slice(dataFilter.length - number);
+    //Si la data est vide à cet endroit c'est qu'il n'y a aucun partenaire pour lui
+    //qui sont ouvert au heures données
+    if (!dataFilterHours.length) {
+      res.json({
+        result: true,
+        empty: true,
+        why: "Aucun partenaire ces heures d'ouvertures",
+      });
+      return;
+    }
 
-    res.json({ result: true, data: randomDataFilter });
+    const dataFilterDistance = dataFilterHours.filter(
+      (partner) =>
+        distanceWord(
+          partner.adress.coordinate.lat,
+          where.latitude,
+          partner.adress.coordinate.long,
+          where.longitude
+        ) < distance
+    );
+
+    //Si la data est vide à cet endroit c'est qu'il n'y a aucun partenaire pour lui
+    //qui sont a la distance donnée autour de l'endoit donnée
+    if (!dataFilterDistance.length) {
+      res.json({
+        result: true,
+        empty: true,
+        why: "Aucun partenaire autour de l'endroit donnée au rayon donnée",
+      });
+      return;
+    }
+
+    const randomDataFilter = dataFilterDistance
+      .sort(() => Math.random() - 0.5)
+      .slice(dataFilterDistance.length - number);
+
+    res.json({ result: true, empty: false, data: randomDataFilter });
   } else {
     res.json({ result: false, error: "les filtres ne sont pas complets" });
   }

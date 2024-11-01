@@ -4,20 +4,26 @@ function getRandomElement(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
 }
 
-function getRandomTime() {
-    const hour = Math.floor(Math.random() * 8) + 9;  // Entre 9h et 17h
+function getRandomTime(min=9 , max=23) {
+    const hour = Math.floor(Math.random() * (max - min)) + min+1;  // Entre (min)h et (max)h
     return `2023-01-01T${String(hour).padStart(2, '0')}:00:00Z`;
+}
+
+function getCorrectRandomTimeForOpeningAndClosing () {
+    const openHour = getRandomTime()
+    const closingHour = getRandomTime(Number(openHour.split("").slice(11,13).join("")))
+    return [{ openTime: openHour, closingTime: closingHour }]
 }
 
 function generateOpeningHours() {
     return {
-        monday: [{ openTime: getRandomTime(), closingTime: getRandomTime() }],
-        tuesday: [{ openTime: getRandomTime(), closingTime: getRandomTime() }],
-        wednesday: [{ openTime: getRandomTime(), closingTime: getRandomTime() }],
-        thursday: [{ openTime: getRandomTime(), closingTime: getRandomTime() }],
-        friday: [{ openTime: getRandomTime(), closingTime: getRandomTime() }],
-        saturday: [{ openTime: getRandomTime(), closingTime: getRandomTime() }],
-        sunday: [{ openTime: getRandomTime(), closingTime: getRandomTime() }]
+        monday: getCorrectRandomTimeForOpeningAndClosing(),
+        tuesday: getCorrectRandomTimeForOpeningAndClosing(),
+        wednesday: getCorrectRandomTimeForOpeningAndClosing(),
+        thursday: getCorrectRandomTimeForOpeningAndClosing(),
+        friday: getCorrectRandomTimeForOpeningAndClosing(),
+        saturday: getCorrectRandomTimeForOpeningAndClosing(),
+        sunday: getCorrectRandomTimeForOpeningAndClosing(),
     };
 }
 
@@ -39,7 +45,14 @@ const freeImages = [
     "https://images.pexels.com/photos/761854/pexels-photo-761854.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "https://images.pexels.com/photos/1307698/pexels-photo-1307698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "https://images.pexels.com/photos/744780/pexels-photo-744780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/735869/pexels-photo-735869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "https://images.pexels.com/photos/735869/pexels-photo-735869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "https://images.pexels.com/photos/696218/pexels-photo-696218.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "https://images.pexels.com/photos/1089930/pexels-photo-1089930.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "https://images.pexels.com/photos/1601775/pexels-photo-1601775.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "https://images.pexels.com/photos/2079438/pexels-photo-2079438.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "https://images.pexels.com/photos/2835547/pexels-photo-2835547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "https://images.pexels.com/photos/3540/restaurant-alcohol-bar-drinks.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"
 ];
 
 function generatePartner(index) {
@@ -47,23 +60,32 @@ function generatePartner(index) {
         name: `Partenaire ${index + 1}`,
         category: getRandomElement(categories),
         description: getRandomElement(descriptions),
-        averagePrice: Math.floor(Math.random() * 50) + 5,
+        averagePrice: Math.floor(Math.random() * 75) , // de 0 à 75
         averageNote: parseFloat((Math.random() * 5).toFixed(1)),
-        urlsPhotos: [getRandomElement(freeImages)],
+        urlsPhotos: [getRandomElement(freeImages),getRandomElement(freeImages),getRandomElement(freeImages)],
         infosAdds: ["Wi-Fi gratuit", "Parking gratuit", "Accessibilité PMR"],
         contact: {
             email: `contact${index + 1}@partner.com`,
             phoneNumber: `123-456-789${index}`
         },
-        adress: {
+        adress: index%2 === 0 ?{
             adress: `${index + 10} Rue de l'Exemple`,
             zipCode: 75000 + (index % 20),
             city: "Paris",
             coordinate: {
-                lat: 48.8566 + Math.random() / 100,
-                long: 2.3522 + Math.random() / 100
+                lat: 48.866667 + (Math.random()-0.5)/5,
+                long: 2.333333 + (Math.random()-0.5) / 10
             }
-        },
+        }:{
+            adress: `${index + 10} Rue de l'Exemple`,
+            zipCode: 20000 + (index % 20),
+            city: "Ajaccio",
+            coordinate: {
+                lat: 41.9167 + (Math.random()-0.5) / 20,
+                long: 8.7333 + (Math.random()-0.5) / 10
+            }
+        }
+        ,
         openingInfos: generateOpeningHours(),
         filterTypes: [
             getRandomElement(filterTypesOptions),
@@ -72,7 +94,7 @@ function generatePartner(index) {
     };
 }
 
-const partnersList = Array.from({ length: 40 }, (_, i) => generatePartner(i));
+const partnersList = Array.from({ length: 200 }, (_, i) => generatePartner(i));
 
 // Sauvegarder en JSON
 fs.writeFileSync('partnersFictifs.json', JSON.stringify(partnersList, null, 2));
