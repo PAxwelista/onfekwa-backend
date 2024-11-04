@@ -10,7 +10,9 @@ const uid2 = require("uid2");
 const token = uid2(32);
 
 //hachage mdp
-const bcrypt = require('bcrypt');
+const bcrypt = require("bcrypt");
+
+const patternEmail = /^[a-zA-Z0-9._%+-]{1,64}@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
 //Route pour l'inscription user par le formulaire
 router.post("/signup", (req, res) => {
@@ -23,9 +25,12 @@ router.post("/signup", (req, res) => {
   // Check if the user has not already been registered
   User.findOne({ email: req.body.email }).then((data) => {
     const hash = bcrypt.hashSync(req.body.password, 10);
-    const patternEmail = /^[a-zA-Z0-9._%+-]{1,64}@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    if (!patternEmail.test(req.body.email)){
-      return res.json({ result: false, error: "Le format de l'email n'est pas valide" })
+
+    if (!patternEmail.test(req.body.email)) {
+      return res.json({
+        result: false,
+        error: "Le format de l'email n'est pas valide",
+      });
     }
     if (data === null) {
       const newUser = new User({
@@ -43,8 +48,14 @@ router.post("/signup", (req, res) => {
       });
 
       newUser.save().then(() => {
-        res.json({ result: true, firstname: req.body.firstname, token, email: req.body.email });
-        console.log(token)
+        res.json({
+          result: true,
+          firstname: req.body.firstname,
+          lastname: req.body.lastname,
+          token,
+          email: req.body.email,
+        });
+        console.log(token);
       });
     } else {
       // User already exists in database
@@ -73,7 +84,7 @@ router.post("/google", (req, res) => {
 
       newUser.save().then(() => {
         res.json({ result: true, firstname: data.firstname, token });
-        console.log(token)
+        console.log(token);
       });
     } else {
       // User already exists in database
@@ -91,8 +102,14 @@ router.post("/signin", (req, res) => {
 
   User.findOne({ email: req.body.email }).then((data) => {
     if (data && bcrypt.compareSync(req.body.password, data.password)) {
-      console.log(data.token)
-      res.json({ result: true, firstname: data.firstname, token: data.token, email: data.email });
+      console.log(data.token);
+      res.json({
+        result: true,
+        firstname: data.firstname,
+        lastname: data.lastname,
+        token: data.token,
+        email: data.email,
+      });
     } else {
       res.json({ result: false, error: "Aucun utilisateur trouvé" });
     }
@@ -160,13 +177,12 @@ router.put("/changePassword/:token", (req, res) => {
     res.json({ result: false, error: "Champs manquants à remplir" });
     return;
   }
-  
+
   User.findOne({ token }).then((data) => {
     if (data && bcrypt.compareSync(req.body.oldPassword, data.password)) {
-      
       const hash = bcrypt.hashSync(req.body.newPassword, 10);
       User.updateOne({ token }, { password: hash }).then((dataUpdate) =>
-        res.json({ result: true})
+        res.json({ result: true })
       );
     } else {
       res.json({ result: false, error: "Ancien mot de passe incorrect" });
@@ -174,25 +190,68 @@ router.put("/changePassword/:token", (req, res) => {
   });
 });
 
-router.put("/groups/:token" , (req,res)=>{
-    const {token} = req.params;
-    const {groups} = req.body;
-    User.updateOne({token},{groups}).then(()=>res.json({return : true}))
-})
+router.put("/groups/:token", (req, res) => {
+  const { token } = req.params;
+  const { groups } = req.body;
+  User.updateOne({ token }, { groups }).then(() => res.json({ return: true }));
+});
 
 //route qui permet de supprimer un utilisateur via son email
-router.delete('/', (req,res) => {
-  
-  User.deleteOne({email: req.body.email})
-  .then(data =>{
-    console.log(data)
-      if(data.deletedCount > 0){
-          res.json({result: true})
-      } else {
-          res.json({result: false, error: 'No user found'})
-      }
+router.delete("/", (req, res) => {
+  User.deleteOne({ email: req.body.email }).then((data) => {
+    console.log(data);
+    if (data.deletedCount > 0) {
+      res.json({ result: true });
+    } else {
+      res.json({ result: false, error: "No user found" });
+    }
+  });
+});
+
+router.put("/changeFirstname/:token", (req, res) => {
+  const { token } = req.params;
+  console.log();
+  if (!checkBody(req.body, ["newFirstname"])) {
+    res.json({ result: false, error: "Champs manquants à remplir" });
+    return;
   }
-     
-  )
-})
+  User.updateOne({ token }, { firstname: req.body.newFirstname }).then(
+    (dataUpdate) => res.json({ result: true })
+  );
+});
+router.put("/changeLastname/:token", (req, res) => {
+  const { token } = req.params;
+  if (!checkBody(req.body, ["newLastname"])) {
+    res.json({ result: false, error: "Champs manquants à remplir" });
+    return;
+  }
+  User.updateOne({ token }, { lastname: req.body.newLastname }).then(
+    (dataUpdate) => res.json({ result: true })
+  );
+});
+router.put("/changeEmail/:token", (req, res) => {
+  const { token } = req.params;
+  if (!checkBody(req.body, ["newEmail"])) {
+    res.json({ result: false, error: "Champs manquants à remplir" });
+    return;
+  }
+
+  if (!patternEmail.test(req.body.newEmail)) {
+    return res.json({
+      result: false,
+      error: "Le format de l'email n'est pas valide",
+    });
+  }
+
+  User.findOne({ email: req.body.newEmail }).then((data) => {
+    if (data) {
+      res.json({ result: false, error: "email déjà utilisé" });
+      return;
+    }
+    User.updateOne({ token }, { email: req.body.newEmail }).then((dataUpdate) =>
+      res.json({ result: true })
+    );
+  });
+});
+
 module.exports = router;
