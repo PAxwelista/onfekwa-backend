@@ -24,7 +24,7 @@ router.post("/signup", (req, res) => {
   User.findOne({ email: req.body.email }).then((data) => {
     const hash = bcrypt.hashSync(req.body.password, 10);
     const patternEmail = /^[a-zA-Z0-9._%+-]{1,64}@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    if (!patternEmail.test(req.body.email)){
+    if (!patternEmail.test(req.body.email)) {
       return res.json({ result: false, error: "Le format de l'email n'est pas valide" })
     }
     if (data === null) {
@@ -68,6 +68,7 @@ router.post("/google", (req, res) => {
           "Avec les amis",
           "En famille",
         ],
+        reservations: [null],
         token,
       });
 
@@ -160,13 +161,13 @@ router.put("/changePassword/:token", (req, res) => {
     res.json({ result: false, error: "Champs manquants à remplir" });
     return;
   }
-  
+
   User.findOne({ token }).then((data) => {
     if (data && bcrypt.compareSync(req.body.oldPassword, data.password)) {
-      
+
       const hash = bcrypt.hashSync(req.body.newPassword, 10);
       User.updateOne({ token }, { password: hash }).then((dataUpdate) =>
-        res.json({ result: true})
+        res.json({ result: true })
       );
     } else {
       res.json({ result: false, error: "Ancien mot de passe incorrect" });
@@ -174,25 +175,90 @@ router.put("/changePassword/:token", (req, res) => {
   });
 });
 
-router.put("/groups/:token" , (req,res)=>{
-    const {token} = req.params;
-    const {groups} = req.body;
-    User.updateOne({token},{groups}).then(()=>res.json({return : true}))
+router.put("/groups/:token", (req, res) => {
+  const { token } = req.params;
+  const { groups } = req.body;
+  User.updateOne({ token }, { groups }).then(() => res.json({ return: true }))
 })
 
 //route qui permet de supprimer un utilisateur via son email
-router.delete('/', (req,res) => {
-  
-  User.deleteOne({email: req.body.email})
-  .then(data =>{
-    console.log(data)
-      if(data.deletedCount > 0){
-          res.json({result: true})
+router.delete('/', (req, res) => {
+
+  User.deleteOne({ email: req.body.email })
+    .then(data => {
+      console.log(data)
+      if (data.deletedCount > 0) {
+        res.json({ result: true })
       } else {
-          res.json({result: false, error: 'No user found'})
+        res.json({ result: false, error: 'No user found' })
       }
+    }
+
+    )
+})
+
+//route qui permet d'afficher la liste des réservations d'un utilisateur
+
+router.get('/reservations/:token', (req, res) => {
+  const { token } = req.params;
+console
+if(token){
+  User.findOne({ token })
+    .then(data => {
+      console.log('data', data)
+
+      if (data) {
+        res.json({ result: true, reservations: data.reservations })
+      } else {
+        res.json({ result: false, error: 'No user found' })
+      }
+    }
+    )
   }
-     
-  )
+})
+
+// route qui permet de créer une réservation
+
+router.put('/reservations/:token', (req, res) => {
+  const { token } = req.params;
+  const newReservation = { foreignKey: req.body.partnerId, date: new Date(), group: req.body.group };
+
+  User.findOne({ token })
+    .then(data => {
+      console.log('data', data)
+      if (data) {
+        data.reservations.push(newReservation); // Ajoute la réservation dans le tableau du sous document reservations
+        data.save()
+          .then(updatedUser => {
+            res.json({ result: true, data: updatedUser.reservations });
+          })
+      } else {
+        res.json({ result: false, error: 'No user found' })
+      }
+    }
+    )
+
+})
+
+// route qui permet de supprimer une réservation
+
+router.delete('/reservations/:token/:bookingId', (req, res) => {
+  const {token, bookingId} = (req.params);
+console.log(req.params)
+
+  User.findOne({token})
+  .then(data => {
+    if (data) {
+
+    data.reservations.pull(bookingId) // Retire la réservation du tableau par son id
+           
+      data.save()
+        .then(updatedUser => {
+          res.json({ result: true, data: updatedUser.reservations });
+        })
+    } else {
+      res.json({ result: false, error: 'No user found' })
+    }
+  })
 })
 module.exports = router;

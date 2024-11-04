@@ -5,7 +5,7 @@ require('../models/partners')
 
 
 const bookingsSchema = mongoose.Schema({
-    foreignKey: [{ type: mongoose.Schema.Types.ObjectId, ref: 'partners' }],
+    foreignKey: { type: mongoose.Schema.Types.ObjectId, ref: 'partners' },
     date: Date,
     group: String
    });
@@ -18,7 +18,7 @@ const userSchema = mongoose.Schema({
     phoneNumber: String,
     favorites: [{ type: mongoose.Schema.Types.ObjectId, ref: 'partners' }],
     groups: [String],
-    reservations: bookingsSchema,
+    reservations: [bookingsSchema],
     token: String, 
 });
 
