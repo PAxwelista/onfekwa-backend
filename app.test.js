@@ -7,6 +7,5 @@ describe("GET /partners", () => {
 
     expect(res.statusCode).toBe(200);
     expect(res.body.result).toBe(true);
-    
   });
 });

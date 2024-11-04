@@ -208,6 +208,7 @@ router.delete("/", (req, res) => {
   });
 });
 
+//route pour modifier le prénom d'un user
 router.put("/changeFirstname/:token", (req, res) => {
   const { token } = req.params;
   console.log();
@@ -219,6 +220,8 @@ router.put("/changeFirstname/:token", (req, res) => {
     (dataUpdate) => res.json({ result: true })
   );
 });
+
+//route pour modifier le nom de famille d'un user
 router.put("/changeLastname/:token", (req, res) => {
   const { token } = req.params;
   if (!checkBody(req.body, ["newLastname"])) {
@@ -229,6 +232,8 @@ router.put("/changeLastname/:token", (req, res) => {
     (dataUpdate) => res.json({ result: true })
   );
 });
+
+//route pour modifier l'adresse email d'un user
 router.put("/changeEmail/:token", (req, res) => {
   const { token } = req.params;
   if (!checkBody(req.body, ["newEmail"])) {
