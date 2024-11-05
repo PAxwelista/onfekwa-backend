@@ -1,6 +1,8 @@
 var express = require("express");
 var router = express.Router();
 
+const { checkBody } = require("../modules/checkBody");
+
 const Pusher = require("pusher");
 
 const uid2 = require("uid2");
@@ -16,26 +18,12 @@ const pusherClient = new Pusher({
   encrypted: true,
 });
 
-router.put("/:name", (req, res) => {
-  console.log("User joined: " + req.params.name);
-  pusherClient.trigger(req.body.chatChannel, "join", {
-    name: req.params.name,
-  });
-  res.sendStatus(204);
-});
-
-router.delete("/:name", (req, res) => {
-  console.log("User left: " + req.params.name);
-  pusherClient.trigger(req.body.chatChannel, "part", {
-    name: req.params.name,
-  });
-  res.sendStatus(204);
-});
 
 router.post("/:token/messages", (req, res) => {
-  console.log(
-    "User (token) " + req.params.token + " sent message: " + req.body.message
-  );
+  if (!checkBody(req.body, ["id","message"])) {
+    res.json({ result: false, error: "Champs manquants à remplir" });
+    return;
+  }
   
   User.findOne({ token: req.params.token }).then((data) => {
     if (!data) {

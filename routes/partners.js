@@ -1,6 +1,8 @@
 var express = require("express");
 var router = express.Router();
 
+const { checkBody } = require("../modules/checkBody");
+
 const Partner = require("../models/partners");
 
 const valDay = {
@@ -78,6 +80,10 @@ router.get("/selectedPartner/:id", (req, res) => {
 
 //récupère les partenraies en fonction des différents filtres
 router.post("/randomWithFilter/:number", async (req, res) => {
+  if (!checkBody(req.body, ["budget" , "eventType" , "when" , "where" , "distance"])) {
+    res.json({ result: false, error: "Champs manquants à remplir" });
+    return;
+  }
   const number = req.params.number;
   const { budget, eventType, when, where, distance } = req.body;
   if (budget && eventType && when && where && distance) {
