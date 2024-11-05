@@ -204,6 +204,7 @@ router.get('/reservations/:token', (req, res) => {
 console
 if(token){
   User.findOne({ token })
+  .populate('reservations.foreignKey')
     .then(data => {
       console.log('data', data)
 
@@ -221,8 +222,8 @@ if(token){
 
 router.put('/reservations/:token', (req, res) => {
   const { token } = req.params;
-  const newReservation = { foreignKey: req.body.partnerId, date: new Date(), group: req.body.group };
-
+  const newReservation = { foreignKey: req.body.partnerId, date: req.body.date, group: req.body.group };
+console.log(newReservation)
   User.findOne({ token })
     .then(data => {
       console.log('data', data)
