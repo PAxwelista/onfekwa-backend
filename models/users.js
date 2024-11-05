@@ -1,6 +1,6 @@
 const mongoose = require('mongoose'); // Importe mongoose pour gérer les schémas et les modèles dans MongoDB
 
-require('../models/partners')
+
 // Schéma de l'utilisateur
 
 
@@ -17,7 +17,7 @@ const userSchema = mongoose.Schema({
     password:String,
     phoneNumber: String,
     favorites: [{ type: mongoose.Schema.Types.ObjectId, ref: 'partners' }],
-    groups: [String],
+    groups: [{ type: mongoose.Schema.Types.ObjectId, ref: 'groups' }],
     reservations: bookingsSchema,
     token: String, 
 });
