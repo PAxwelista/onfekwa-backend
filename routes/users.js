@@ -124,7 +124,8 @@ router.put("/joinGroup", (req, res) => {
     res.json({ result: false, error: "Champs manquants à remplir" });
     return;
   }
-  User.findOne({ email: req.body.email, groups: { $nin: req.body.id } }).then(
+  User.findOne({ email: { $regex: new RegExp(req.body.email, "i") }, groups: { $nin: req.body.id } }).then(
+    
     (data) => {
       if (!data) {
         res.json({
@@ -134,7 +135,7 @@ router.put("/joinGroup", (req, res) => {
         return;
       }
       User.updateOne(
-        { email: req.body.email },
+        { email: { $regex: new RegExp(req.body.email, "i") } },
         { $push: { groups: req.body.id } }
       ).then(() => res.json({ result: true }));
     }
@@ -204,14 +205,25 @@ router.delete("/", (req, res) => {
     return;
   }
 
-  User.deleteOne({ email: req.body.email }).then((data) => {
-    if (data.deletedCount > 0) {
-      res.json({ result: true });
-    } else {
-      res.json({ result: false, error: "No user found" });
-    }
-  });
-});
+  User.findOne({ email: req.body.email }).then((dataUser) => {
+    User.deleteOne({ email: req.body.email }).then((data) => {
+      if (data.deletedCount <= 0) { // si on a rien supprimé
+        res.json({result:false , error: "aucun élément supprimé"})
+        return;
+      }
+      for (const dataGroup of dataUser.groups){ 
+        // regarde tout les groupes de l'utilisateur supprimé
+        User.find({ groups: dataGroup }).then((dateUserGroup) => {
+          if (dateUserGroup.length<=0) { 
+            // si personne ne fait parti des groupes on supprime les groupes
+            Group.deleteOne({ _id: dataGroup  }).then();
+          }
+        })
+      }
+      res.json({result:true})
+    })
+  })
+})
 
 //route pour modifier le prénom d'un user
 router.put("/changeFirstname/:token", (req, res) => {
