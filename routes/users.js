@@ -297,14 +297,13 @@ router.get("/reservations/:token", (req, res) => {
 // route qui permet de créer une réservation
 router.put("/reservations/:token", (req, res) => {
   const { token } = req.params;
-  if (!checkBody(req.body, ["partnerId", "date", "group"])) {
+  if (!checkBody(req.body, ["partnerId", "date"])) {
     res.json({ result: false, error: "Champs manquants à remplir" });
     return;
   }
   const newReservation = {
     foreignKey: req.body.partnerId,
     date: req.body.date,
-    group: req.body.group,
   };
   User.findOne({ token }).then((data) => {
     console.log("data", data);
