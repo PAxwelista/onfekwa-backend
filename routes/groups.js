@@ -17,8 +17,12 @@ router.post("/messages", (req, res) => {
       populate: {
         path: "user",
       },
+    }).populate({
+      path: "messages",
+      populate: {
+        path: "partner",
+      },
     })
-
     .then((group) => {
       if (!group) {
         res.json({ result: false, error: "Pas de groupe avec cet ID" });

@@ -20,7 +20,7 @@ const pusherClient = new Pusher({
 
 
 router.post("/:token/messages", (req, res) => {
-  if (!checkBody(req.body, ["id","message"])) {
+  if (!checkBody(req.body, ["id","message"])) { 
     res.json({ result: false, error: "Champs manquants à remplir" });
     return;
   }
@@ -43,6 +43,7 @@ router.post("/:token/messages", (req, res) => {
             user: data._id,
             text: req.body.message,
             date: new Date(),
+            partner : req.body.partnerId 
           },
         },
       }
@@ -52,6 +53,7 @@ router.post("/:token/messages", (req, res) => {
         user: data,
         text: req.body.message,
         date: new Date(),
+        partnerId : req.body.partnerId //partnerId c'est si on envoi un partenaire par message
       });
       res.json({result : true})
     })

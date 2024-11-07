@@ -6,6 +6,7 @@ const messagesSchema = mongoose.Schema({
   text: String,
   date: Date,
   user: { type: mongoose.Schema.Types.ObjectId, ref: "users" },
+  partner:{ type: mongoose.Schema.Types.ObjectId, ref: "partners" },
 });
 
 const groupsSchema = mongoose.Schema({

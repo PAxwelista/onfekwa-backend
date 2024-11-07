@@ -68,7 +68,6 @@ router.post("/signin", (req, res) => {
 
   User.findOne({ email: req.body.email }).then((data) => {
     if (data && bcrypt.compareSync(req.body.password, data.password)) {
-      console.log(data.token);
       res.json({
         result: true,
         firstname: data.firstname,
@@ -124,22 +123,22 @@ router.put("/joinGroup", (req, res) => {
     res.json({ result: false, error: "Champs manquants à remplir" });
     return;
   }
-  User.findOne({ email: { $regex: new RegExp(req.body.email, "i") }, groups: { $nin: req.body.id } }).then(
-    
-    (data) => {
-      if (!data) {
-        res.json({
-          result: false,
-          error: "Utilisateur dans le groupe ou inexistant",
-        });
-        return;
-      }
-      User.updateOne(
-        { email: { $regex: new RegExp(req.body.email, "i") } },
-        { $push: { groups: req.body.id } }
-      ).then(() => res.json({ result: true }));
+  User.findOne({
+    email: { $regex: new RegExp(req.body.email, "i") },
+    groups: { $nin: req.body.id },
+  }).then((data) => {
+    if (!data) {
+      res.json({
+        result: false,
+        error: "Utilisateur dans le groupe ou inexistant",
+      });
+      return;
     }
-  );
+    User.updateOne(
+      { email: { $regex: new RegExp(req.body.email, "i") } },
+      { $push: { groups: req.body.id } }
+    ).then(() => res.json({ result: true }));
+  });
 });
 
 //route pour quitter un group
@@ -157,7 +156,7 @@ router.put("/exitGroup/:token", (req, res) => {
             if (data) {
               res.json({ result: true, info: "Groupe quitté" });
             } else {
-              Group.deleteOne({ _id: req.body.id  }).then(() =>
+              Group.deleteOne({ _id: req.body.id }).then(() =>
                 res.json({ result: true, info: "Groupe supprimé" })
               );
             }
@@ -207,23 +206,24 @@ router.delete("/", (req, res) => {
 
   User.findOne({ email: req.body.email }).then((dataUser) => {
     User.deleteOne({ email: req.body.email }).then((data) => {
-      if (data.deletedCount <= 0) { // si on a rien supprimé
-        res.json({result:false , error: "aucun élément supprimé"})
+      if (data.deletedCount <= 0) {
+        // si on a rien supprimé
+        res.json({ result: false, error: "aucun élément supprimé" });
         return;
       }
-      for (const dataGroup of dataUser.groups){ 
+      for (const dataGroup of dataUser.groups) {
         // regarde tout les groupes de l'utilisateur supprimé
         User.find({ groups: dataGroup }).then((dateUserGroup) => {
-          if (dateUserGroup.length<=0) { 
+          if (dateUserGroup.length <= 0) {
             // si personne ne fait parti des groupes on supprime les groupes
-            Group.deleteOne({ _id: dataGroup  }).then();
+            Group.deleteOne({ _id: dataGroup }).then();
           }
-        })
+        });
       }
-      res.json({result:true})
-    })
-  })
-})
+      res.json({ result: true });
+    });
+  });
+});
 
 //route pour modifier le prénom d'un user
 router.put("/changeFirstname/:token", (req, res) => {
@@ -283,8 +283,6 @@ router.get("/reservations/:token", (req, res) => {
     User.findOne({ token })
       .populate("reservations.foreignKey")
       .then((data) => {
-        console.log("data", data);
-
         if (data) {
           res.json({ result: true, reservations: data.reservations });
         } else {
@@ -306,7 +304,6 @@ router.put("/reservations/:token", (req, res) => {
     date: req.body.date,
   };
   User.findOne({ token }).then((data) => {
-    console.log("data", data);
     if (data) {
       data.reservations.push(newReservation); // Ajoute la réservation dans le tableau du sous document reservations
       data.save().then((updatedUser) => {
@@ -319,7 +316,6 @@ router.put("/reservations/:token", (req, res) => {
 });
 
 // route qui permet de supprimer une réservation
-
 router.delete("/reservations/:token/:bookingId", (req, res) => {
   const { token, bookingId } = req.params;
 
@@ -335,4 +331,69 @@ router.delete("/reservations/:token/:bookingId", (req, res) => {
     }
   });
 });
+
+// route pour ajouter un partenaire aux favoris
+router.put("/addFavorite/:token", (req, res) => {
+  if (!checkBody(req.body, ["partnerId"])) {
+    res.json({ result: false, error: "Champs manquants à remplir" });
+    return;
+  }
+  User.updateOne(
+    { token: req.params.token },
+    { $push: { favorites: req.body.partnerId } }
+  ).then((data) => {
+    res.json({ result: true });
+  });
+});
+
+// route pour enlever un partenaire aux favoris
+router.put("/removeFavorite/:token", (req, res) => {
+  if (!checkBody(req.body, ["partnerId"])) {
+    res.json({ result: false, error: "Champs manquants à remplir" });
+    return;
+  }
+  User.updateOne(
+    { token: req.params.token },
+    { $pull: { favorites: req.body.partnerId } }
+  ).then(() => {
+    res.json({ result: true });
+  });
+});
+
+//récupère tout les favoris
+router.get("/favorites/:token", (req, res) => {
+  User.findOne({ token: req.params.token })
+    .populate("favorites")
+    .then((data) => {
+      if (!data) {
+        res.json({
+          result: false,
+          error: "Utilisateur non trouvé avec ce token",
+        });
+        return;
+      }
+      res.json({ result: true, partners: data.favorites });
+    });
+});
+
+//savoir si le partenaire est liké
+router.get("/isFavorite/:token/:partnersId", (req, res) => {
+  User.findOne({
+    token: req.params.token,
+    favorites: req.params.partnersId,
+  }).then((data) => {
+    if (!data) {
+      res.json({
+        result: true,
+        isLiked: false,
+      });
+      return;
+    }
+    res.json({
+      result: true,
+      isLiked: true,
+    });
+  });
+});
+
 module.exports = router;

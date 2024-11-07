@@ -7,7 +7,6 @@ var logger = require('morgan');
 
 var usersRouter = require('./routes/users');
 var partnersRouter = require('./routes/partners');
-var favoritesRouter = require('./routes/favorites');
 var pusherRouter = require('./routes/pusher');
 var groupsRouter = require('./routes/groups');
 
@@ -28,7 +27,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/users', usersRouter);
 app.use('/partners', partnersRouter);
-app.use('/favorites', favoritesRouter);
 app.use('/pusher', pusherRouter);
 app.use('/groups', groupsRouter);
 
