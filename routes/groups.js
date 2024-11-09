@@ -44,3 +44,4 @@ router.put("/changeName/:newName", (req, res) => {
 });
 
 module.exports = router;
+

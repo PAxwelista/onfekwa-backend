@@ -9,6 +9,7 @@ const uid2 = require("uid2");
 
 const Group = require("../models/groups");
 const User = require("../models/users");
+const Partner = require("../models/partners");
 
 const pusherClient = new Pusher({
   appId: process.env.PUSHER_APPID,
@@ -25,8 +26,8 @@ router.post("/:token/messages", (req, res) => {
     return;
   }
   
-  User.findOne({ token: req.params.token }).then((data) => {
-    if (!data) {
+  User.findOne({ token: req.params.token }).then((dataUser) => {
+    if (!dataUser) {
       res.json({
         result: false,
         error: "Utilisateur avec ce token non trouvé",
@@ -40,7 +41,7 @@ router.post("/:token/messages", (req, res) => {
       {
         $push: {
           messages: {
-            user: data._id,
+            user: dataUser._id,
             text: req.body.message,
             date: new Date(),
             partner : req.body.partnerId 
@@ -48,14 +49,17 @@ router.post("/:token/messages", (req, res) => {
         },
       }
     ).then(()=>{
-      pusherClient.trigger(req.body.id, "message", {
-        _id : uid2(12),
-        user: data,
-        text: req.body.message,
-        date: new Date(),
-        partnerId : req.body.partnerId //partnerId c'est si on envoi un partenaire par message
-      });
-      res.json({result : true})
+      Partner.findById(req.body.partnerId).then(dataPartner=>{
+        pusherClient.trigger(req.body.id, "message", {
+          _id : uid2(12),
+          user: dataUser,
+          text: req.body.message,
+          date: new Date(),
+          partner : dataPartner //partnerId c'est si on envoi un partenaire par message
+        });
+        res.json({result : true})
+
+      })
     })
     
   });
