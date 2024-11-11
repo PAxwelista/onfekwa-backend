@@ -12,11 +12,17 @@ router.post("/messages", (req, res) => {
     return;
   }
   Group.findById(req.body.id)
+    // `populate` est utilisé pour remplir les champs de référence dans les documents de la base de données.
+    // Premier `populate` : Remplit le champ `messages` du groupe en récupérant tous les messages associés.
+    // À l'intérieur du premier `populate`, un deuxième `populate` est utilisé pour remplir le champ `user` dans chaque message,
+    // afin d'obtenir toutes les informations de l'utilisateur lié à chaque message.
     .populate({
       path: "messages",
       populate: {
         path: "user",
       },
+      // Deuxième `populate` : Remplit à nouveau le champ `messages` pour obtenir cette fois-ci le champ `partner`
+      // dans chaque message, afin d'inclure les informations du partenaire lié à chaque message.
     }).populate({
       path: "messages",
       populate: {

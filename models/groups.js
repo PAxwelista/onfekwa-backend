@@ -5,7 +5,7 @@ const mongoose = require("mongoose"); // Importe mongoose pour gérer les schém
 const messagesSchema = mongoose.Schema({
   text: String,
   date: Date,
-  user: { type: mongoose.Schema.Types.ObjectId, ref: "users" },
+  user: { type: mongoose.Schema.Types.ObjectId, ref: "users" }, //foreignKey
   partner:{ type: mongoose.Schema.Types.ObjectId, ref: "partners" },
 });
 

@@ -125,7 +125,7 @@ router.put("/joinGroup", (req, res) => {
   }
   User.findOne({
     email: { $regex: new RegExp(req.body.email, "i") },
-    groups: { $nin: req.body.id },
+    groups: { $nin: req.body.id }, //nin = not in - L'utilisateur n'appartient pas au groupe spécifié par l'ID dans req.body.id
   }).then((data) => {
     if (!data) {
       res.json({
@@ -154,10 +154,10 @@ router.put("/exitGroup/:token", (req, res) => {
         (data) => {
           User.findOne({ groups: req.body.id }).then((data) => {
             if (data) {
-              res.json({ result: true, info: "Groupe quitté" });
+              res.json({ result: true, info: "Groupe quitté" }); //si reste au moins un user dans le groupe alors on le quitte seulement.
             } else {
               Group.deleteOne({ _id: req.body.id }).then(() =>
-                res.json({ result: true, info: "Groupe supprimé" })
+                res.json({ result: true, info: "Groupe supprimé" }) // Si plus de de user alors on supprime le groupe (evite de charger la BDD).
               );
             }
           });

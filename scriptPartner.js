@@ -1,23 +1,23 @@
 const fs = require("fs");
 
 function getRandomElement(arr) {
-  return arr[Math.floor(Math.random() * arr.length)];
+  return arr[Math.floor(Math.random() * arr.length)]; //Prends un des éléments du tableau de maniere aleatoire.
 }
 
-function getRandomTime(min = 9, max = 23) {
-  const hour = Math.floor(Math.random() * (max - min)) + min + 1; // Entre (min)h et (max)h
-  return `2023-01-01T${String(hour).padStart(2, "0")}:00:00Z`;
+function getRandomTime(min = 9, max = 23) { //Même si rien jamais en dessous de 9h et au dessus de 23h.
+  const hour = Math.floor(Math.random() * (max - min)) + min; // Maniere de calculer un nombre aléatoire dans l'interval entre le min et le max 
+  return `2023-01-01T${String(hour).padStart(2, "0")}:00:00Z`; //Permet de rajouter "0" si la taille du retour est inferieur à 2.
 }
 
 function getCorrectRandomTimeForOpeningAndClosing() {
-  const openHour = getRandomTime(9,12);
+  const openHour = getRandomTime(9,12); 
   const closingHour = getRandomTime(18,24);
-  return [{ openTime: openHour, closingTime: closingHour }];
+  return [{ openTime: openHour, closingTime: closingHour }]; // Affiche le retour avec un heure d'ouverture et une heure de fermeture.
 }
 
 function generateOpeningHours() {
   return {
-    monday: getCorrectRandomTimeForOpeningAndClosing(),
+    monday: getCorrectRandomTimeForOpeningAndClosing(), // Rappelle a chaque fois la fonction getCorrectRandomTimeForOpeningAndClosing()
     tuesday: getCorrectRandomTimeForOpeningAndClosing(),
     wednesday: getCorrectRandomTimeForOpeningAndClosing(),
     thursday: getCorrectRandomTimeForOpeningAndClosing(),
@@ -361,8 +361,8 @@ function generatePartner(index) {
       phoneNumber: `123-456-789${index}`,
     },
     adress:
-      index % 2 === 0
-        ? {
+      index % 2 === 0 //ex: 3 modulo 2, reste 1. (dans cet exemple voir si mon exemple est paire)
+        ? { //Dans cet exemple le modulo sert à soi mettre l'adresse à Paris, soit à Ajaccio.
             adress: `${index + 10} Rue de l'Exemple`,
             zipCode: 75000 + (index % 20),
             city: "Paris",
@@ -387,9 +387,20 @@ function generatePartner(index) {
     ],
   };
 }
+// Crée un tableau appelé `partnersList` contenant 200 éléments.
+// `Array.from` est utilisé pour générer un tableau de la longueur spécifiée.
+// `{ length: 200 }` définit la longueur du tableau à 200, ce qui signifie qu'il contiendra 200 éléments.
+// `(_, i)` est la liste de paramètres de la fonction de rappel. `_` représente chaque élément (ignoré ici),
+// et `i` est l'index de l'élément actuel dans le tableau.
+// `generatePartner(i)` est appelé avec `i` comme argument pour chaque élément. 
+// `generatePartner` est probablement une fonction qui génère un objet ou une valeur en fonction de l'index `i`.
+// Le résultat est un tableau de 200 éléments, où chaque élément est généré par `generatePartner` avec son index.
+const partnersList = Array.from({ length: 200 }, (_, i) => generatePartner(i));  
 
-const partnersList = Array.from({ length: 200 }, (_, i) => generatePartner(i));
-
-// Sauvegarder en JSON
+// Écrit le contenu de `partnersList` dans un fichier JSON nommé `partnersFictifs.json`.
+// `fs.writeFileSync` est une méthode de Node.js qui écrit des données dans un fichier de façon synchrone.
+// "partnersFictifs.json" est le nom du fichier de sortie.
+// `JSON.stringify(partnersList, null, 2)` convertit `partnersList` en une chaîne JSON formatée.
+// `null` et `2` servent à ajouter une indentation de 2 espaces pour rendre le JSON plus lisible.
 fs.writeFileSync("partnersFictifs.json", JSON.stringify(partnersList, null, 2));
 console.log("Liste de partenaires générée dans partnersFictifs.json");
